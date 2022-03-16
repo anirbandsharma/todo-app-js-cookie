@@ -54,7 +54,7 @@ function addTodo(event) {
   //appent new div
   todoList.appendChild(newDiv);
 
-  //local storage
+  //cookie storage
   if (getCookie("storage") === "") {
     allData = [];
   } else {
@@ -62,13 +62,13 @@ function addTodo(event) {
   }
   const data = { text: todoInput.value, check: 0 };
   allData.push(data);
-  // localStorage.setItem("storage", JSON.stringify(allData));
+ 
   setCookie("storage", JSON.stringify(allData))
 
   //clear input
   todoInput.value = "";
 
-  // console.log(localStorage.getItem("storage"));
+  
 }
 
 function action(e) {
@@ -164,7 +164,7 @@ function action(e) {
 }
 
 
-//get from local storage
+//get from cookie storage
 function getTodos() {
   console.log(getCookie("storage"))
   let todos;
