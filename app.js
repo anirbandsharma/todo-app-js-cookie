@@ -11,9 +11,6 @@ const getCookie = (name) => {
   }, '')
 }
 
-const deleteCookie = (name, path) => {
-  setCookie(name, '', -1, path)
-}
 
 //selectors
 const todoInput = document.querySelector(".todo-input");
